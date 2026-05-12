@@ -1,0 +1,92 @@
+:root {
+ 
+  /* CORES */
+ 
+  /* Fundo */
+  --color-bg:                  #fffff5;          /* Creme suave — fundo geral */
+ 
+  /* Texto */
+  --color-text-primary:        #264754;          /* Azul-teal escuro — todo o texto */
+ 
+  /* Paleta Verde (cor principal do jogo) */
+  --color-green-cta:           #95d33e;          /* Verde vibrante — botões CTA e inputs */
+  --color-green-dark:          #4ca905;          /* Verde escuro — bordas e destaques */
+  --color-green-light:         #dcffb1;          /* Verde clarinho — fundo da barra de progresso */
+  --color-green-badge:         rgba(161, 229, 52, 0.92); /* Badge "Pergunta N" */
+  --color-green-progress-fill: rgba(85, 115, 0, 0.32);   /* Preenchimento da barra de progresso */
+  --color-green-sound:         rgba(149, 211, 62, 0.66); /* Botão de áudio */
+  --color-green-image-border:  rgba(96, 205, 0, 0.52);   /* Borda do container de imagem */
+ 
+  /* Alternativas de resposta */
+  --color-option-bg:           rgba(217, 217, 217, 0.29); /* Fundo das opções */
+  --color-option-border:       rgba(157, 240, 24, 0.61);  /* Borda das opções */
+ 
+  /* Estados de feedback */
+  --color-correct:             #95d33e;          /* Resposta correta — verde CTA */
+  --color-wrong:               #ff6b6b;          /* Resposta errada — vermelho suave (inferido) */
+ 
+ 
+  /* TIPOGRAFIA */
+ 
+  --font-display:       'Fredoka', sans-serif;   /* Títulos, labels, botões */
+  --font-body:          'Poppins', sans-serif;   /* Perguntas, alternativas, texto geral */
+ 
+  --font-weight-regular: 400;
+  --font-weight-medium:  500;
+  --font-weight-bold:    700;
+ 
+  /* Escala de tamanhos */
+  --text-xs:    20px;   /* Uso secundário */
+  --text-sm:    24px;   /* Labels (Nome / Idade / Escola) e contador "X de 15" */
+  --text-md:    30px;   /* Perguntas e alternativas de resposta */
+  --text-lg:    36px;   /* Título da tela de login */
+  --text-xl:    40px;   /* Botão CTA "Vamos Jogar!" */
+ 
+  /* Line-height */
+  --leading-normal: normal;
+ 
+ 
+  /* BORDER RADIUS */
+ 
+  --radius-input:   16px;   /* Campos de input (login) */
+  --radius-badge:   34px;   /* Badge de pergunta, barra de progresso, alternativas */
+  --radius-btn:     40px;   /* Botão CTA principal */
+  --radius-sound:   44px;   /* Botões de áudio */
+  --radius-image:   47px;   /* Container da imagem da questão */
+ 
+ 
+  /* BORDAS */
+ 
+  --border-progress: 2px solid var(--color-green-dark);
+  --border-option:   4px solid var(--color-option-border);
+  --border-image:    5px solid var(--color-green-image-border);
+ 
+ 
+  /* SOMBRAS */
+ 
+  --shadow-btn:   0 4px 12px rgba(38, 71, 84, 0.20);
+  --shadow-card:  0 2px  8px rgba(38, 71, 84, 0.12);
+ 
+ 
+  /* DIMENSÕES */
+  --screen-width:   1440px;
+  --screen-height:  1024px;
+ 
+  /* Componentes */
+  --progress-height:    55px;
+  --badge-height:       55px;
+  --badge-width:        245px;
+  --option-height:      112px;
+  --option-width:       352px;
+  --option-letter-size: 57px;   /* Bolinha com letra A / B / C */
+  --sound-btn-w:        73px;
+  --sound-btn-h:        72px;
+  --sound-icon-size:    48px;
+  --sound-icon-sm:      37px;   /* Ícone menor — dentro das alternativas */
+  --image-size:         487px;
+  --cta-btn-height:     88px;
+  --cta-btn-width:      480px;
+  --input-height:       57px;
+  --input-width:        480px;
+}
+ 
