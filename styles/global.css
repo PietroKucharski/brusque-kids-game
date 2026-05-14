@@ -22,6 +22,7 @@
   --color-green-progress-fill: rgba(85, 115, 0, 0.32);   /* Preenchimento da barra de progresso */
   --color-green-sound:         rgba(149, 211, 62, 0.66); /* Botão de áudio */
   --color-green-image-border:  rgba(96, 205, 0, 0.52);   /* Borda do container de imagem */
+  --color-overlay-final:       rgba(120, 180, 80, 0.35); /* Overlay verde — tela final */
  
   /* Alternativas de resposta */
   --color-option-bg:           rgba(217, 217, 217, 0.29); /* Fundo das opções */
