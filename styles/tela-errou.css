@@ -9,15 +9,6 @@ body {
   justify-content: center;
 }
 
-.screen {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  animation: fadeIn 0.5s ease both;
-}
-
 /* ── Estrela no topo ── */
 .star {
   font-size: clamp(2.5rem, 8vw, 5rem);
@@ -26,24 +17,11 @@ body {
 }
 
 /* ── Linha "Muito Bem!" ── */
-.titulo-linha {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
 .titulo {
   font-size: clamp(2rem, 7vw, 4rem);
   font-weight: 900;
   color: var(--color-text-primary);
   letter-spacing: 0.5px;
-}
-
-.subtitulo {
-  font-size: clamp(1rem, 3vw, 1.6rem);
-  font-weight: var(--font-weight-bold);
-  color: var(--color-text-primary);
-  margin-top: -8px;
 }
 
 /* ── Capivara ── */
@@ -54,47 +32,3 @@ body {
   filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.2));
 }
 
-/* ── Animações ── */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes spinPop {
-  from {
-    opacity: 0;
-    transform: scale(0.3) rotate(-180deg);
-  }
-
-  to {
-    opacity: 1;
-    transform: scale(1) rotate(0deg);
-  }
-}
-
-@keyframes bounceIn {
-  from {
-    opacity: 0;
-    transform: scale(0.5) translateY(40px);
-  }
-
-  to {
-    opacity: 1;
-    transform: scale(1) translateY(0);
-  }
-}
-
-@keyframes wiggle {
-  from {
-    transform: rotate(-10deg) scale(1);
-  }
-
-  to {
-    transform: rotate(10deg) scale(1.1);
-  }
-}

@@ -22,6 +22,7 @@
   --color-green-progress-fill: rgba(85, 115, 0, 0.32);   /* Preenchimento da barra de progresso */
   --color-green-sound:         rgba(149, 211, 62, 0.66); /* Botão de áudio */
   --color-green-image-border:  rgba(96, 205, 0, 0.52);   /* Borda do container de imagem */
+  --color-overlay-final:       rgba(120, 180, 80, 0.35); /* Overlay verde — tela final */
  
   /* Alternativas de resposta */
   --color-option-bg:           rgba(217, 217, 217, 0.29); /* Fundo das opções */
@@ -103,4 +104,48 @@
 @keyframes popIn {
   from { transform: scale(0.95); opacity: 0; }
   to   { transform: scale(1);    opacity: 1; }
+}
+
+/* ── Layout compartilhado (acertou / tela-errou) ── */
+.screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  animation: fadeIn 0.5s ease both;
+}
+
+.titulo-linha {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.subtitulo {
+  font-size: clamp(1rem, 3vw, 1.6rem);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  margin-top: -8px;
+}
+
+/* ── Animações compartilhadas ── */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes spinPop {
+  from { opacity: 0; transform: scale(0.3) rotate(-180deg); }
+  to   { opacity: 1; transform: scale(1)   rotate(0deg);    }
+}
+
+@keyframes bounceIn {
+  from { opacity: 0; transform: scale(0.5) translateY(40px); }
+  to   { opacity: 1; transform: scale(1)   translateY(0);    }
+}
+
+@keyframes wiggle {
+  from { transform: rotate(-10deg) scale(1);   }
+  to   { transform: rotate(10deg)  scale(1.1); }
 }
