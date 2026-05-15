@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pergunta 8 - Descobrindo Brusque</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Poppins:ital,wght@0,400;0,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/global.css">
+  <link rel="stylesheet" href="styles/pergunta.css">
+</head>
+<body>
+  <div class="pergunta-screen">
+
+    <div class="progress-area">
+      <span class="counter">8 de 15</span>
+      <div class="progress-track">
+        <div class="progress-fill" style="width: 73.2%;">
+          <img class="capivara-progress" src="assets/icone_capivara_barra_de_progresso.svg" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <div class="pergunta-badge">Pergunta 8</div>
+
+    <div class="question-image">
+      <img src="assets/imagem_pergunta_8.png" alt="Imagem da pergunta 8" />
+    </div>
+
+    <div class="question-area">
+      <button class="sound-btn-main">
+        <img src="assets/icone_de_som.svg" alt="som" />
+      </button>
+      <p class="question-text">Como se chama o museu que guarda a história de Brusque?</p>
+    </div>
+
+    <div class="options-area">
+
+      <div class="option">
+        <button class="option-sound"><img src="assets/icone_de_som.svg" alt="som" /></button>
+        <div class="option-box">
+          <div class="letter-circle">A</div>
+          <span class="option-text">MUSEU CASA DE BRUSQUE</span>
+        </div>
+      </div>
+
+      <div class="option">
+        <button class="option-sound"><img src="assets/icone_de_som.svg" alt="som" /></button>
+        <div class="option-box">
+          <div class="letter-circle">B</div>
+          <span class="option-text">MUSEU DO FUTEBOL</span>
+        </div>
+      </div>
+
+      <div class="option">
+        <button class="option-sound"><img src="assets/icone_de_som.svg" alt="som" /></button>
+        <div class="option-box">
+          <div class="letter-circle">C</div>
+          <span class="option-text">MUSEU DO BRASIL</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var el = document.querySelector('.pergunta-screen');
+      function fit() {
+        if (window.innerWidth <= 768) { el.style.transform = ''; return; }
+        var sx = (window.innerWidth  - 48) / 1440;
+        var sy = (window.innerHeight - 48) / 1024;
+        el.style.transform = 'scale(' + Math.min(sx, sy) + ')';
+      }
+      fit();
+      window.addEventListener('resize', fit);
+    })();
+  </script>
+</body>
+</html>
