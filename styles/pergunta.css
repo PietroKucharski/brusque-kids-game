@@ -16,6 +16,10 @@ body {
   transform-origin: center;
 }
 
+/* ── Wrapper progresso (transparente no desktop) ── */
+.progress-area {}
+
+/* ── Contador "X de 15" ── */
 /* ── Área de progresso (wrapper transparente no desktop) ── */
 .progress-area { /* sem posicionamento: filhos absolutos se posicionam em .pergunta-screen */ }
 
@@ -30,6 +34,7 @@ body {
   line-height: var(--leading-normal);
 }
 
+/* ── Barra de progresso ── */
 .progress-track {
   position: absolute;
   left: 50px;
@@ -98,6 +103,10 @@ body {
   object-fit: cover;
 }
 
+/* ── Wrapper som + texto (transparente no desktop) ── */
+.question-area {}
+
+/* ── Botão de som da questão ── */
 /* ── Área som + pergunta (wrapper transparente no desktop) ── */
 .question-area { /* sem posicionamento: filhos absolutos se posicionam em .pergunta-screen */ }
 
@@ -123,6 +132,7 @@ body {
   object-fit: contain;
 }
 
+/* ── Texto da questão ── */
 .question-text {
   position: absolute;
   left: calc(50% + 21px);
@@ -137,6 +147,7 @@ body {
   line-height: var(--leading-normal);
 }
 
+/* ── Área de alternativas ── */
 /* ── Alternativas ── */
 .options-area {
   position: absolute;
@@ -148,6 +159,7 @@ body {
   padding: 0 16px;
 }
 
+/* ── Alternativa individual ── */
 .option {
   position: relative;
   width: 424px;
@@ -188,6 +200,7 @@ body {
   border-radius: var(--radius-badge);
 }
 
+/* ── Círculo com letra (A / B / C) ── */
 .letter-circle {
   position: absolute;
   left: 19px;
@@ -205,6 +218,7 @@ body {
   color: var(--color-text-primary);
 }
 
+/* ── Texto da alternativa ── */
 .option-text {
   position: absolute;
   left: 88px;
@@ -219,6 +233,8 @@ body {
   line-height: 1.2;
 }
 
+/* ── Mobile ── */
+@media (max-width: 768px) {
 
 /* ══════════════════════════════════════════════════════
    RESPONSIVO — MOBILE  (≤ 768 px)
