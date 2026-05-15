@@ -13,27 +13,32 @@
 <body>
   <div class="pergunta-screen">
 
-    <span class="counter">11 de 15</span>
-
-    <div class="progress-track"></div>
-    <div class="progress-fill" style="width: 985px;"></div>
-    <img class="capivara-progress" style="left: 936px;" src="" alt="" />
+    <div class="progress-area">
+      <span class="counter">11 de 15</span>
+      <div class="progress-track">
+        <div class="progress-fill" style="width: 73.2%;">
+          <img class="capivara-progress" src="assets/icone_capivara_barra_de_progresso.svg" alt="" />
+        </div>
+      </div>
+    </div>
 
     <div class="pergunta-badge">Pergunta 11</div>
 
     <div class="question-image">
-      <img src="" alt="Imagem da pergunta 11" />
+      <img src="assets/imagem_pergunta_11.png" alt="Imagem da pergunta 11" />
     </div>
 
-    <button class="sound-btn-main">
-      <img src="" alt="som" />
-    </button>
-    <p class="question-text">Brusque é uma cidade grande ou pequena?</p>
+    <div class="question-area">
+      <button class="sound-btn-main">
+        <img src="assets/icone_de_som.svg" alt="som" />
+      </button>
+      <p class="question-text">Brusque é uma cidade grande ou pequena?</p>
+    </div>
 
     <div class="options-area">
 
       <div class="option">
-        <button class="option-sound"><img src="" alt="som" /></button>
+        <button class="option-sound"><img src="assets/icone_de_som.svg" alt="som" /></button>
         <div class="option-box">
           <div class="letter-circle">A</div>
           <span class="option-text">CIDADE PEQUENA</span>
@@ -41,7 +46,7 @@
       </div>
 
       <div class="option">
-        <button class="option-sound"><img src="" alt="som" /></button>
+        <button class="option-sound"><img src="assets/icone_de_som.svg" alt="som" /></button>
         <div class="option-box">
           <div class="letter-circle">B</div>
           <span class="option-text">CIDADE MÉDIA</span>
@@ -49,7 +54,7 @@
       </div>
 
       <div class="option">
-        <button class="option-sound"><img src="" alt="som" /></button>
+        <button class="option-sound"><img src="assets/icone_de_som.svg" alt="som" /></button>
         <div class="option-box">
           <div class="letter-circle">C</div>
           <span class="option-text">PAÍS</span>
@@ -63,6 +68,7 @@
     (function () {
       var el = document.querySelector('.pergunta-screen');
       function fit() {
+        if (window.innerWidth <= 768) { el.style.transform = ''; return; }
         var sx = (window.innerWidth  - 48) / 1440;
         var sy = (window.innerHeight - 48) / 1024;
         el.style.transform = 'scale(' + Math.min(sx, sy) + ')';
