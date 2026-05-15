@@ -20,6 +20,9 @@ body {
 .progress-area {}
 
 /* ── Contador "X de 15" ── */
+/* ── Área de progresso (wrapper transparente no desktop) ── */
+.progress-area { /* sem posicionamento: filhos absolutos se posicionam em .pergunta-screen */ }
+
 .counter {
   position: absolute;
   left: 77px;
@@ -43,6 +46,7 @@ body {
   border-radius: var(--radius-badge);
 }
 
+/* fill vive dentro do track — width% ajusta em qualquer viewport */
 .progress-fill {
   position: absolute;
   left: 0;
@@ -52,6 +56,7 @@ body {
   background-color: var(--color-green-progress-fill);
 }
 
+/* capivara vive dentro do fill — cola na borda direita */
 .capivara-progress {
   position: absolute;
   right: 0;
@@ -102,6 +107,9 @@ body {
 .question-area {}
 
 /* ── Botão de som da questão ── */
+/* ── Área som + pergunta (wrapper transparente no desktop) ── */
+.question-area { /* sem posicionamento: filhos absolutos se posicionam em .pergunta-screen */ }
+
 .sound-btn-main {
   position: absolute;
   left: 413px;
@@ -140,6 +148,7 @@ body {
 }
 
 /* ── Área de alternativas ── */
+/* ── Alternativas ── */
 .options-area {
   position: absolute;
   left: 13px;
@@ -226,6 +235,12 @@ body {
 
 /* ── Mobile ── */
 @media (max-width: 768px) {
+
+/* ══════════════════════════════════════════════════════
+   RESPONSIVO — MOBILE  (≤ 768 px)
+   ══════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+
   body {
     height: 100dvh;
     overflow-y: auto;
@@ -244,6 +259,7 @@ body {
     box-sizing: border-box;
   }
 
+  /* ── Progresso ── */
   .progress-area {
     display: flex;
     flex-direction: column;
@@ -274,6 +290,7 @@ body {
     display: none;
   }
 
+  /* ── Badge ── */
   .pergunta-badge {
     position: static;
     width: fit-content;
@@ -283,6 +300,7 @@ body {
     align-self: flex-start;
   }
 
+  /* ── Imagem ── */
   .question-image {
     position: static;
     width: 100%;
@@ -290,6 +308,7 @@ body {
     border-radius: 16px;
   }
 
+  /* ── Som + Pergunta ── */
   .question-area {
     display: flex;
     align-items: center;
@@ -319,6 +338,7 @@ body {
     text-align: left;
   }
 
+  /* ── Alternativas ── */
   .options-area {
     position: static;
     flex-direction: column;
