@@ -1,14 +1,19 @@
 body {
   background-color: var(--color-bg);
-  width: var(--screen-width);
-  height: var(--screen-height);
+  width: 100vw;
+  height: 100vh;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .pergunta-screen {
   position: relative;
-  width: var(--screen-width);
-  height: var(--screen-height);
+  width: 1440px;
+  height: 1024px;
+  flex-shrink: 0;
+  transform-origin: center;
 }
 
 /* ── Contador "X de 15" ── */
