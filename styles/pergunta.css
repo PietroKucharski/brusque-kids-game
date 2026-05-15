@@ -16,6 +16,9 @@ body {
   transform-origin: center;
 }
 
+/* ── Wrapper progresso (transparente no desktop) ── */
+.progress-area {}
+
 /* ── Contador "X de 15" ── */
 .counter {
   position: absolute;
@@ -42,8 +45,8 @@ body {
 
 .progress-fill {
   position: absolute;
-  left: 50px;
-  top: 52px;
+  left: 0;
+  top: 2px;
   height: 51px;
   border-radius: var(--radius-badge);
   background-color: var(--color-green-progress-fill);
@@ -51,7 +54,9 @@ body {
 
 .capivara-progress {
   position: absolute;
-  top: 56px;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
   width: 99px;
   height: 47px;
   object-fit: contain;
@@ -92,6 +97,9 @@ body {
   height: 100%;
   object-fit: cover;
 }
+
+/* ── Wrapper som + texto (transparente no desktop) ── */
+.question-area {}
 
 /* ── Botão de som da questão ── */
 .sound-btn-main {
@@ -214,4 +222,164 @@ body {
   color: var(--color-text-primary);
   text-align: center;
   line-height: 1.2;
+}
+
+/* ── Mobile ── */
+@media (max-width: 768px) {
+  body {
+    height: 100dvh;
+    overflow-y: auto;
+    align-items: flex-start;
+  }
+
+  .pergunta-screen {
+    width: 100%;
+    height: auto;
+    min-height: 100dvh;
+    transform: none !important;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 16px;
+    gap: 16px;
+    box-sizing: border-box;
+  }
+
+  .progress-area {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .counter {
+    position: static;
+    font-size: 0.875rem;
+  }
+
+  .progress-track {
+    position: relative;
+    width: 100%;
+    height: 14px;
+    border-radius: 7px;
+    top: auto;
+    left: auto;
+  }
+
+  .progress-fill {
+    top: 0;
+    height: 100%;
+    border-radius: 7px;
+  }
+
+  .capivara-progress {
+    display: none;
+  }
+
+  .pergunta-badge {
+    position: static;
+    width: fit-content;
+    height: auto;
+    padding: 8px 20px;
+    font-size: 1rem;
+    align-self: flex-start;
+  }
+
+  .question-image {
+    position: static;
+    width: 100%;
+    height: 220px;
+    border-radius: 16px;
+  }
+
+  .question-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .sound-btn-main {
+    position: static;
+    width: 48px;
+    height: 48px;
+    padding: 8px;
+    flex-shrink: 0;
+  }
+
+  .sound-btn-main img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .question-text {
+    position: static;
+    left: auto;
+    transform: none;
+    width: auto;
+    flex: 1;
+    font-size: clamp(0.9rem, 4vw, 1.1rem);
+    text-align: left;
+  }
+
+  .options-area {
+    position: static;
+    flex-direction: column;
+    gap: 12px;
+    padding: 0;
+  }
+
+  .option {
+    width: 100%;
+    height: auto;
+    min-height: 64px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+  }
+
+  .option-sound {
+    position: static;
+    top: auto;
+    width: 48px;
+    height: 48px;
+    padding: 8px;
+    flex-shrink: 0;
+  }
+
+  .option-sound img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .option-box {
+    position: relative;
+    left: auto;
+    top: auto;
+    flex: 1;
+    width: auto;
+    height: auto;
+    min-height: 64px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+  }
+
+  .letter-circle {
+    position: static;
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+    flex-shrink: 0;
+  }
+
+  .option-text {
+    position: static;
+    left: auto;
+    right: auto;
+    top: auto;
+    transform: none;
+    font-size: clamp(0.85rem, 3.5vw, 1rem);
+    text-align: left;
+    flex: 1;
+  }
 }
