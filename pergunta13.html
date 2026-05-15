@@ -58,5 +58,18 @@
 
     </div>
   </div>
+
+  <script>
+    (function () {
+      var el = document.querySelector('.pergunta-screen');
+      function fit() {
+        var sx = (window.innerWidth  - 48) / 1440;
+        var sy = (window.innerHeight - 48) / 1024;
+        el.style.transform = 'scale(' + Math.min(sx, sy) + ')';
+      }
+      fit();
+      window.addEventListener('resize', fit);
+    })();
+  </script>
 </body>
 </html>
